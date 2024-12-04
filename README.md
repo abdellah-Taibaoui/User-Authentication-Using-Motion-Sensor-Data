@@ -92,10 +92,10 @@ Below is the architecture of the model used for user authentication:
 The training and validation performance of the model is visualized below:
 
 - **Accuracy over Epochs**:
-  ![Accuracy Graph](path/to/accuracy_graph_image.png)
+  ![Accuracy Graph](User-Authentication-Using-Motion-Sensor-Data/Accuracy_output.png)
 
 - **Loss over Epochs**:
-  ![Loss Graph](path/to/loss_graph_image.png)
+  ![Loss Graph](User-Authentication-Using-Motion-Sensor-Data/Loss_output.png)
 
 ---
 
