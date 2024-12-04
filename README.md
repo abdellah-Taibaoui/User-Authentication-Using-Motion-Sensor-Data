@@ -33,7 +33,7 @@ The **HMOG dataset** contains data collected from mobile device sensors, includi
 - **Touch Gesture Data**: Touchscreen interaction logs, such as swipe gestures.
 
 The dataset is structured across different sessions and users, requiring preprocessing and transformation to standardize it for training machine learning models.
-
+Link to the dataset : "https://hmog-dataset.github.io/hmog/"
 ---
 
 ## Features
