@@ -66,8 +66,8 @@ This repository includes a Python script with five key functions for processing 
 
 The repository also includes a **Jupyter Notebook** that:
 - Splits the processed data into training, validation, and testing sets.
-- Trains machine learning models for user authentication.
-- Evaluates models based on accuracy, precision, recall, and F1-score.
+- Trains 3 chanel models for user authentication.
+- Evaluates models based on accuracy and Error.
 
 ---
 
