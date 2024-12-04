@@ -1,16 +1,20 @@
 # User Authentication Using Motion Data
 
-This repository contains the implementation of a user authentication system using motion data. The project leverages the **HMOG dataset** and includes tools for data preprocessing, oversampling, ETL (Extract, Transform, Load), and data slicing, alongside model training to build and evaluate authentication systems.
+This repository focuses on user authentication using motion and touch gesture data from the **HMOG dataset**. By leveraging machine learning techniques, the project aims to identify users based on unique patterns in their motion data. 
+
+The project includes Python utilities for data preprocessing and manipulation, as well as a Jupyter Notebook for data splitting and model training.
 
 ---
 
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Features](#features)
-3. [Project Structure](#project-structure)
-4. [Usage](#usage)
-5. [Installation](#installation)
+2. [Dataset](#dataset)
+3. [Features](#features)
+   - [Python Utilities](#python-utilities)
+   - [Model Training Notebook](#model-training-notebook)
+4. [Installation and Usage](#installation-and-usage)
+5. [Results](#results)
 6. [Future Work](#future-work)
 7. [License](#license)
 
@@ -18,42 +22,69 @@ This repository contains the implementation of a user authentication system usin
 
 ## Overview
 
-The project focuses on developing a **biometric user authentication system** using motion and touch data from mobile devices. The HMOG dataset serves as the foundation for this work, capturing human motion and gesture patterns during interactions with mobile devices. 
+Motion and touch data are highly individualistic, making them effective for user authentication. This project uses the **HMOG dataset** (Hand Movement, Orientation, and Grasp) to create a pipeline for extracting, transforming, and analyzing this data. The ultimate goal is to build a machine learning model capable of accurately authenticating users based on motion data.
 
-Key highlights of this repository include:
-- A suite of Python utilities for handling and processing the HMOG dataset.
-- Data preprocessing and augmentation to handle challenges like imbalanced samples.
-- A Jupyter Notebook for splitting data into training and testing sets, and training machine learning models.
+---
+
+## Dataset
+
+The **HMOG dataset** contains data collected from mobile device sensors, including:
+- **Motion Data**: Accelerometer, gyroscope, and magnetometer readings.
+- **Touch Gesture Data**: Touchscreen interaction logs, such as swipe gestures.
+
+The dataset is structured across different sessions and users, requiring preprocessing and transformation to standardize it for training machine learning models.
 
 ---
 
 ## Features
 
 ### Python Utilities
-This repository provides several utility functions for data preprocessing and transformation:
-1. **`overSampling()`**: 
-   - Balances touch gesture samples by replicating logs through oversampling.
-   - Handles inconsistencies in the length of motion and touch data across sessions and users.
 
-2. **`ETLHelper()`**: 
-   - A helper function to facilitate the Extract-Transform-Load (ETL) pipeline for preprocessing raw HMOG data.
+This repository includes a Python script with five key functions for processing and preparing the HMOG dataset:
 
-3. **`ETL()`**: 
-   - A complete ETL implementation for extracting, cleaning, and loading the data for further analysis.
+1. **`overSampling()`**:
+   - Addresses the imbalance between touch gesture logs (small in size) and motion sensor logs (larger in size).
+   - Uses oversampling to replicate touch gesture samples and balance the dataset.
 
-4. **`dataGenerator()`**: 
-   - Automates data batching and generation for training machine learning models.
+2. **`ETLHelper()`**:
+   - Acts as a helper for the ETL process (Extract, Transform, and Load).
+   - Facilitates the preprocessing pipeline for motion and gesture data.
 
-5. **`slice()`**: 
-   - Splits data into overlapping slices for efficient feature extraction and model training.
+3. **`ETL()`**:
+   - Implements the complete ETL process:
+     - **Extract**: Reads raw motion and gesture data.
+     - **Transform**: Cleans, standardizes, and formats the data.
+     - **Load**: Prepares data for machine learning tasks.
 
-### Jupyter Notebook
-- **Data Splitting and Model Training**:
-  - Includes procedures to split the HMOG dataset into training and test sets.
-  - Implements machine learning models for user authentication.
-  - Provides model evaluation metrics to assess performance.
+4. **`dataGenerator()`**:
+   - Generates batches of data for machine learning models.
+   - Handles large datasets efficiently by creating data slices for training and validation.
+
+5. **`slice()`**:
+   - Splits motion data into overlapping slices for analysis.
+   - Enables feature extraction from smaller, overlapping windows of motion logs.
+
+### Model Training Notebook
+
+The repository also includes a **Jupyter Notebook** that:
+- Splits the processed data into training, validation, and testing sets.
+- Trains machine learning models for user authentication.
+- Evaluates models based on accuracy, precision, recall, and F1-score.
 
 ---
 
-## Project Structure
+## Installation and Usage
+
+### Prerequisites
+
+- Python 3.x
+- Required libraries: `numpy`, `pandas`, `scikit-learn`, `tensorflow`, `matplotlib`, `seaborn`, `notebook`.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/motion-authentication.git
+   cd motion-authentication
+
 
