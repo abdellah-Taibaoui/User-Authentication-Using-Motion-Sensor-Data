@@ -86,16 +86,16 @@ The model achieved **92% test accuracy** when trained on data from three users w
 ### Model Architecture
 Below is the architecture of the model used for user authentication:
 
-![Model Architecture](User-Authentication-Using-Motion-Sensor-Data/model architecture.gif)
+![Model Architecture](model architecture.gif)
 
 ### Training Accuracy and Loss Graphs
 The training and validation performance of the model is visualized below:
 
 - **Accuracy over Epochs**:
-  ![Accuracy Graph](User-Authentication-Using-Motion-Sensor-Data/Accuracy_output.png)
+  ![Accuracy Graph](Accuracy_output.png)
 
 - **Loss over Epochs**:
-  ![Loss Graph](User-Authentication-Using-Motion-Sensor-Data/Loss_output.png)
+  ![Loss Graph](Loss_output.png)
 
 ---
 
