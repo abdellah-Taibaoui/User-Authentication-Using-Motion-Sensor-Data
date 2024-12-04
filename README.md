@@ -13,10 +13,8 @@ The project includes Python utilities for data preprocessing and manipulation, a
 3. [Features](#features)
    - [Python Utilities](#python-utilities)
    - [Model Training Notebook](#model-training-notebook)
-4. [Installation and Usage](#installation-and-usage)
 5. [Results](#results)
-6. [Future Work](#future-work)
-7. [License](#license)
+
 
 ---
 
@@ -73,18 +71,5 @@ The repository also includes a **Jupyter Notebook** that:
 
 ---
 
-## Installation and Usage
-
-### Prerequisites
-
-- Python 3.x
-- Required libraries: `numpy`, `pandas`, `scikit-learn`, `tensorflow`, `matplotlib`, `seaborn`, `notebook`.
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/motion-authentication.git
-   cd motion-authentication
 
 
