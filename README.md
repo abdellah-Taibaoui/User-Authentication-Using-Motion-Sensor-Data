@@ -13,8 +13,8 @@ The project includes Python utilities for data preprocessing and manipulation, a
 3. [Features](#features)
    - [Python Utilities](#python-utilities)
    - [Model Training Notebook](#model-training-notebook)
-5. [Results](#results)
-
+4. [Results](#results)
+5. [Visualizations](#visualizations)
 
 ---
 
@@ -30,13 +30,17 @@ The **HMOG dataset** contains data collected from mobile device sensors, includi
 - **Motion Data**: Accelerometer, gyroscope, and magnetometer readings.
 - **Touch Gesture Data**: Touchscreen interaction logs, such as swipe gestures.
 
-- The dataset is structured across different sessions and users, requiring preprocessing and transformation to standardize it for training machine learning models.
-- Link to the dataset : "https://hmog-dataset.github.io/hmog/"
+### Key Details:
+- The dataset includes data from multiple users, structured across different sessions.
+- For this project, the model was trained on **3 users with 13 sessions each**, using a combination of motion and touch gesture data.
+- Preprocessing steps were implemented to standardize and balance the data.
+- Link to the dataset: [HMOG Dataset](https://hmog-dataset.github.io/hmog/)
+
 ---
 
 ## Features
 
-### Python Utilities
+### Python Utilities (Data Loading)
 
 This repository includes a Python script with five key functions for processing and preparing the HMOG dataset:
 
@@ -66,10 +70,36 @@ This repository includes a Python script with five key functions for processing 
 
 The repository also includes a **Jupyter Notebook** that:
 - Splits the processed data into training, validation, and testing sets.
-- Trains 3 chanel models for user authentication.
-- Evaluates models based on accuracy and Error.
+- Trains **3-channel models** for user authentication.
+- Evaluates models based on **accuracy** and **loss**.
 
 ---
+
+## Results
+
+The model achieved **92% test accuracy** when trained on data from three users with 13 sessions each. This demonstrates the feasibility of using motion and touch gesture data for reliable user authentication.
+
+---
+
+## Visualizations
+
+### Model Architecture
+Below is the architecture of the model used for user authentication:
+
+![Model Architecture](path/to/model_architecture_image.png)
+
+### Training Accuracy and Loss Graphs
+The training and validation performance of the model is visualized below:
+
+- **Accuracy over Epochs**:
+  ![Accuracy Graph](path/to/accuracy_graph_image.png)
+
+- **Loss over Epochs**:
+  ![Loss Graph](path/to/loss_graph_image.png)
+
+---
+
+
 
 
 
